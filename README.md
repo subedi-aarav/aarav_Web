@@ -1,3 +1,2 @@
-# Thank you for watching video. You can easily download website and use it.
-
-### Source: startbootstrap.com
+# This is my personal web page
+# Learn more about me from aaravsubedi.com.np
