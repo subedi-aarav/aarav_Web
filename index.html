@@ -46,7 +46,7 @@
             text-align: center;
             line-height: 1.2;
             cursor: default;
-            animation: colorCycle 10s infinite;
+            animation: colorCycle 500s infinite;
         }
 
         /* Color cycling animation */
@@ -466,7 +466,7 @@
                 </div>
             </div>
 
-            <!-- Contact Section -->
+            <!-- Contact Section
             <div id="contact" class="content-section">
                 <h2>Get In Touch</h2>
                 <p>I'm always interested in discussing technology, AI, web development, or potential collaboration opportunities.</p>
@@ -491,6 +491,50 @@
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
+                </div> -->
+
+                <!-- Contact Section - Replace your existing contact section with this -->
+                 
+                <div id="contact" class="content-section">
+                    <h2>Get In Touch</h2>
+                    <p>I'm always interested in discussing technology, AI, web development, or potential collaboration opportunities.</p>
+                    
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            
+                            <!-- Hidden fields for better functionality -->
+                            <input type="hidden" name="_subject" value="New contact from Aarav's website!" />
+                            <input type="hidden" name="_next" value="https://github.com/subedi-aarav/aarav_Web" />
+                            <!-- Honeypot field to prevent spam -->
+                            <input type="text" name="_gotcha" style="display:none" />
+                            
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                        
+                        <!-- Status messages -->
+                        <div id="form-status" style="margin-top: 20px; display: none;"></div>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <h3>Location</h3>
+                        <p>Anamnagar, Kathmandu<br>Nepal</p>
+                    </div>
                 </div>
 
                 <div style="margin-top: 30px;">
@@ -532,7 +576,7 @@
 
             // Show selected section
             document.getElementById(sectionId).classList.add('active');
-            
+    
             // Add active class to clicked nav link
             event.target.classList.add('active');
             
@@ -548,15 +592,30 @@
                 'contact': 'Contact',
                 'social': 'Social Media'
             };
-            
+    
             document.getElementById('page-title').textContent = titles[sectionId] || 'About';
         }
 
-        // Handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
+        // Enhanced form handling with better user feedback
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    const formStatus = document.getElementById('form-status');
+                    const submitButton = this.querySelector('.btn');
+                    
+                    // Show loading state
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
+                    
+                    formStatus.style.display = 'block';
+                    formStatus.innerHTML = '<p style="color: #666; padding: 10px; background-color: #f0f0f0; border-radius: 4px;">📤 Sending your message...</p>';
+                    
+                    // Let the form submit naturally to Formspree
+                    // The page will redirect to thank-you page or show Formspree's response
+                });
+            }
         });
 
         // Add smooth scrolling for better UX
@@ -567,6 +626,56 @@
                 }
             });
         });
+        // function showSection(sectionId) {
+        //     // Hide all sections
+        //     const sections = document.querySelectorAll('.content-section');
+        //     sections.forEach(section => {
+        //         section.classList.remove('active');
+        //     });
+
+        //     // Remove active class from all nav links
+        //     const navLinks = document.querySelectorAll('.nav-link');
+        //     navLinks.forEach(link => {
+        //         link.classList.remove('active');
+        //     });
+
+        //     // Show selected section
+        //     document.getElementById(sectionId).classList.add('active');
+            
+        //     // Add active class to clicked nav link
+        //     event.target.classList.add('active');
+            
+        //     // Update page title
+        //     const titles = {
+        //         'about': 'About',
+        //         'portfolio': 'Portfolio',
+        //         'blog': 'Blog',
+        //         'skills': 'Skills',
+        //         'education': 'Education',
+        //         'experience': 'Experience',
+        //         'projects': 'Projects',
+        //         'contact': 'Contact',
+        //         'social': 'Social Media'
+        //     };
+            
+        //     document.getElementById('page-title').textContent = titles[sectionId] || 'About';
+        // }
+
+        // // Handle form submission
+        // document.getElementById('contactForm').addEventListener('submit', function(e) {
+        //     e.preventDefault();
+        //     alert('Thank you for your message! I will get back to you soon.');
+        //     this.reset();
+        // });
+
+        // // Add smooth scrolling for better UX
+        // document.querySelectorAll('.nav-link').forEach(link => {
+        //     link.addEventListener('click', function(e) {
+        //         if (this.getAttribute('href').startsWith('#')) {
+        //             e.preventDefault();
+        //         }
+        //     });
+        // });
     </script>
 </body>
 </html>
