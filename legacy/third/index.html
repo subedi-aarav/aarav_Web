@@ -3,22 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aarav Subedi - AI Student & Web Developer from Nepal</title>
-    <meta name="description" content="Aarav Subedi is an AI student from Nepal pursuing BTech in Artificial Intelligence at Kathmandu University. Passionate about machine learning, web development, and technology innovation.">
-    <meta name="keywords" content="Aarav Subedi, AI student, web developer, Nepal, Kathmandu University, machine learning, artificial intelligence">
-    <meta name="author" content="Aarav Subedi">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aarav-subedi.com/">
-    <meta property="og:title" content="Aarav Subedi - AI Student & Web Developer">
-    <meta property="og:description" content="AI student from Nepal passionate about machine learning and web development. Currently pursuing BTech in AI at Kathmandu University.">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://aarav-subedi.com/">
-    <meta property="twitter:title" content="Aarav Subedi - AI Student & Web Developer">
-    <meta property="twitter:description" content="AI student from Nepal passionate about machine learning and web development.">
+    <title>Aarav Subedi</title>
     <style>
         * {
             margin: 0;
@@ -61,22 +46,22 @@
             text-align: center;
             line-height: 1.2;
             cursor: default;
-            animation: colorCycle 10s infinite;
+            animation: colorCycle 500s infinite;
         }
 
         /* Color cycling animation */
         @keyframes colorCycle {
-            0% { color: #FFD700; }    /* Gold */
+            0% { color: #2F2F2F; }    /* Dark Black */
             10% { color: #C0C0C0; }   /* Silver */
             20% { color: #2E8B57; }   /* Green */
             30% { color: #1E90FF; }   /* Blue */
             40% { color: #8B4513; }   /* Dark Orange */
             50% { color: #F8F8FF; }   /* Bright White */
             60% { color: #8A2BE2; }   /* Purple */
-            70% { color: #2F2F2F; }   /* Dark Black */
+            70% { color: #FFD700; }   /* Gold */
             80% { color: #8B0000; }   /* Dark Blood Red */
             90% { color: #4169E1; }   /* Royal Blue */
-            100% { color: #FFD700; }  /* Back to Gold */
+            100% { color: #2F2F2F; }  /* Back to Dark Black */
         }
 
         .sidebar nav ul {
@@ -238,50 +223,9 @@
             background-color: #555;
         }
 
-        /* Form help text styling */
-        .form-help {
-            font-size: 12px;
-            color: #666;
-            margin-top: 3px;
-            display: block;
-        }
-
-        /* Loading state for button */
-        .btn-loading {
-            display: none;
-        }
-
-        .btn.loading .btn-text {
-            display: none;
-        }
-
-        .btn.loading .btn-loading {
-            display: inline;
-        }
-
-        /* Focus styles for accessibility */
-        .sidebar nav ul li a:focus,
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .btn:focus {
-            outline: 2px solid #1E90FF;
-            outline-offset: 2px;
-        }
-
-        /* Skip to content link for accessibility */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #000;
-            color: #fff;
-            padding: 8px;
-            text-decoration: none;
-            z-index: 1000;
-        }
-
-        .skip-link:focus {
-            top: 6px;
+        /* Social Links */
+        .social-links {
+            margin-top: 20px;
         }
 
         .social-links a {
@@ -293,52 +237,6 @@
 
         .social-links a:hover {
             text-decoration: underline;
-        }
-
-        /* Form help text styling */
-        .form-help {
-            font-size: 12px;
-            color: #666;
-            margin-top: 3px;
-            display: block;
-        }
-
-        /* Loading state for button */
-        .btn-loading {
-            display: none;
-        }
-
-        .btn.loading .btn-text {
-            display: none;
-        }
-
-        .btn.loading .btn-loading {
-            display: inline;
-        }
-
-        /* Focus styles for accessibility */
-        .sidebar nav ul li a:focus,
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .btn:focus {
-            outline: 2px solid #1E90FF;
-            outline-offset: 2px;
-        }
-
-        /* Skip to content link for accessibility */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #000;
-            color: #fff;
-            padding: 8px;
-            text-decoration: none;
-            z-index: 1000;
-        }
-
-        .skip-link:focus {
-            top: 6px;
         }
 
         /* Responsive Design */
@@ -386,12 +284,14 @@
         .content-section.active {
             display: block;
         }
+
+        /* Default show about section */
+        #about {
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <!-- Skip to content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
     <div class="container">
         <!-- Sidebar Navigation -->
         <div class="sidebar">
@@ -413,7 +313,7 @@
         </div>
 
         <!-- Main Content -->
-        <div class="main-content" id="main-content">
+        <div class="main-content">
             <div class="content-header">
                 <h1 id="page-title">About</h1>
                 <div class="date">2025-09-22</div>
@@ -566,13 +466,13 @@
                 </div>
             </div>
 
-            <!-- Contact Section -->
+                 
             <div id="contact" class="content-section">
                 <h2>Get In Touch</h2>
                 <p>I'm always interested in discussing technology, AI, web development, or potential collaboration opportunities.</p>
                 
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form action="https://formspree.io/f/mblzraej" method="POST" id="contactForm">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -589,8 +489,18 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
+                            
+                        <!-- Hidden fields for better functionality -->
+                        <input type="hidden" name="_subject" value="New contact from Aarav's website!" />
+                        <input type="hidden" name="_next" value="https://github.com/subedi-aarav/aarav_Web" />
+                        <!-- Honeypot field to prevent spam -->
+                        <input type="text" name="_gotcha" style="display:none" />
+                           
                         <button type="submit" class="btn">Send Message</button>
                     </form>
+                        
+                    <!-- Status messages -->
+                    <div id="form-status" style="margin-top: 20px; display: none;"></div>
                 </div>
 
                 <div style="margin-top: 30px;">
@@ -632,7 +542,7 @@
 
             // Show selected section
             document.getElementById(sectionId).classList.add('active');
-            
+    
             // Add active class to clicked nav link
             event.target.classList.add('active');
             
@@ -648,15 +558,30 @@
                 'contact': 'Contact',
                 'social': 'Social Media'
             };
-            
+    
             document.getElementById('page-title').textContent = titles[sectionId] || 'About';
         }
 
-        // Handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
+        // Enhanced form handling with better user feedback
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    const formStatus = document.getElementById('form-status');
+                    const submitButton = this.querySelector('.btn');
+                    
+                    // Show loading state
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
+                    
+                    formStatus.style.display = 'block';
+                    formStatus.innerHTML = '<p style="color: #666; padding: 10px; background-color: #f0f0f0; border-radius: 4px;">📤 Sending your message...</p>';
+                    
+                    // Let the form submit naturally to Formspree
+                    // The page will redirect to thank-you page or show Formspree's response
+                });
+            }
         });
 
         // Add smooth scrolling for better UX
@@ -667,6 +592,56 @@
                 }
             });
         });
+        // function showSection(sectionId) {
+        //     // Hide all sections
+        //     const sections = document.querySelectorAll('.content-section');
+        //     sections.forEach(section => {
+        //         section.classList.remove('active');
+        //     });
+
+        //     // Remove active class from all nav links
+        //     const navLinks = document.querySelectorAll('.nav-link');
+        //     navLinks.forEach(link => {
+        //         link.classList.remove('active');
+        //     });
+
+        //     // Show selected section
+        //     document.getElementById(sectionId).classList.add('active');
+            
+        //     // Add active class to clicked nav link
+        //     event.target.classList.add('active');
+            
+        //     // Update page title
+        //     const titles = {
+        //         'about': 'About',
+        //         'portfolio': 'Portfolio',
+        //         'blog': 'Blog',
+        //         'skills': 'Skills',
+        //         'education': 'Education',
+        //         'experience': 'Experience',
+        //         'projects': 'Projects',
+        //         'contact': 'Contact',
+        //         'social': 'Social Media'
+        //     };
+            
+        //     document.getElementById('page-title').textContent = titles[sectionId] || 'About';
+        // }
+
+        // // Handle form submission
+        // document.getElementById('contactForm').addEventListener('submit', function(e) {
+        //     e.preventDefault();
+        //     alert('Thank you for your message! I will get back to you soon.');
+        //     this.reset();
+        // });
+
+        // // Add smooth scrolling for better UX
+        // document.querySelectorAll('.nav-link').forEach(link => {
+        //     link.addEventListener('click', function(e) {
+        //         if (this.getAttribute('href').startsWith('#')) {
+        //             e.preventDefault();
+        //         }
+        //     });
+        // });
     </script>
 </body>
 </html>
