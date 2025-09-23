@@ -61,7 +61,7 @@
             text-align: center;
             line-height: 1.2;
             cursor: default;
-            animation: colorCycle 10s infinite;
+            animation: colorCycle 250s infinite;
         }
 
         /* Color cycling animation */
@@ -161,10 +161,14 @@
         }
 
         .portfolio-item {
+            display: block; /* so it behaves like a card */
+            text-decoration: none; /* remove underline */
+            color: inherit;
             background-color: #f9f9f9;
             padding: 20px;
             border: 1px solid #ddd;
             transition: box-shadow 0.3s ease;
+            border-radius: 6px; /* optional, makes it smoother */
         }
 
         .portfolio-item:hover {
@@ -388,10 +392,8 @@
                     <li><a href="#skills" class="nav-link" onclick="showSection('skills')">Skills</a></li>
                     <li><a href="#education" class="nav-link" onclick="showSection('education')">Education</a></li>
                     <li><a href="#experience" class="nav-link" onclick="showSection('experience')">Experience</a></li>
-                    <li><a href="#projects" class="nav-link" onclick="showSection('projects')">Projects</a></li>
                     <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a></li>
-                    <li><a href="#social" class="nav-link" onclick="showSection('social')">Social Media</a></li>
-                    <li><a href="news.html" target="_blank">News</a></li>
+                    <li><a href="#social" class="nav-link" onclick="showSection('social')">Social</a></li>
                 </ul>
             </nav>
         </div>
@@ -400,48 +402,76 @@
         <div class="main-content" id="main-content">
             <div class="content-header">
                 <h1 id="page-title">About</h1>
-                <div class="date">2025-09-22</div>
+                <div class="date" id="date"></div>
             </div>
 
             <!-- About Section -->
             <div id="about" class="content-section active">
-                <p>Hello, I am Aarav Subedi, an IT Student from Nepal currently pursuing my Bachelor of Technology in Artificial Intelligence at Kathmandu University.</p>
+                <p>I am Aarav Subedi, an IT Student from Nepal currently pursuing my Bachelor of Technology in Artificial Intelligence at Kathmandu University.</p>
                 
-                <p>I am passionate about artificial intelligence, machine learning, and modern web development. My interests span across various domains of technology, from deep learning algorithms to creating intuitive user interfaces.</p>
+                <p>Passionate about artificial intelligence, machine learning, and modern web development.</p>
 
-                <p>Based in Anamnagar, Kathmandu, Nepal, I enjoy traveling and coding in my free time. I believe in the power of technology to solve real-world problems and am always eager to learn new technologies and methodologies.</p>
-
-                <p>Thank you for visiting my personal website. Feel free to explore my work and connect with me through various channels listed in the navigation.</p>
+                <p>Feel free to explore my work and connect.</p>
             </div>
 
             <!-- Portfolio Section -->
             <div id="portfolio" class="content-section">
-                <h2>My Work</h2>
-                <p>Here's a collection of projects and work that showcase my skills and interests in various areas of technology and development.</p>
-                
+                <p>Here's a collection of projects and work that are aligned to my interests in various areas of technology and development.</p>
+                <h2>Projects</h2>
+            
+                <div class="portfolio-grid">
+                    <a href="news.html" target="_blank" class="portfolio-item">
+                        <h3>NEWS Aggregation</h3>
+                        <p>project is to develop a fully functional web-based platform for multi-language news aggregation and intelligent summarization.</p>
+                    </a>
+                    <a href="https://github.com/C-s-on/parikar" target="_blank" class="portfolio-item">
+                        <h3>Parikar</h3>
+                        <p>Parikar is a mobile app designed to classify 12 distinct types of Nepali cuisine using transfer learning with YOLOv8, InceptionV3, and VGG16 models.</p>
+                    </a>
+                    <a href="https://github.com/C-s-on/REACO" target="_blank" class="portfolio-item">
+                        <h3>Reaco</h3>
+                        <p>Reaco is an intelligent face detection and classification app designed to automate the sorting and grouping of images based on the individuals from images.</p>
+                    </a>
+                    <a href="https://github.com/C-s-on/parikar" target="_blank" class="portfolio-item">
+                        <h3>BaghChal</h3>
+                        <p>Working on it</p>
+                    </a>
+                    <a href="https://github.com/C-s-on/parikar" target="_blank" class="portfolio-item">
+                        <h3>test project 1</h3>
+                        <p>working on it</p>
+                    </a>
+                    <a href="https://github.com/C-s-on/parikar" target="_blank" class="portfolio-item">
+                        <h3>test project 2</h3>
+                        <p>working on it</p>
+                    </a>
+                </div>
+                <br>
+                <br>
+
+                <h2>My Works</h2>
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
-                        <h3>Log Cabin</h3>
+                        <h3>web site</h3>
                         <p>A web development project focusing on responsive design and user experience. Built using modern HTML5, CSS3, and JavaScript technologies.</p>
                     </div>
                     <div class="portfolio-item">
-                        <h3>Tasty Cake</h3>
+                        <h3>metroits classification</h3>
                         <p>An interactive web application showcasing dynamic content management and modern UI/UX principles with engaging animations.</p>
                     </div>
                     <div class="portfolio-item">
-                        <h3>Circus Tent</h3>
+                        <h3>movie recomendation system</h3>
                         <p>A creative project demonstrating advanced CSS techniques and JavaScript functionality for interactive web experiences.</p>
                     </div>
                     <div class="portfolio-item">
-                        <h3>Game Controller</h3>
+                        <h3>test work 1</h3>
                         <p>A gaming-focused application involving real-time interactions and responsive controls, showcasing my interest in game development.</p>
                     </div>
                     <div class="portfolio-item">
-                        <h3>Secure Safe</h3>
+                        <h3>test work 2</h3>
                         <p>A security-focused project implementing encryption and secure data handling practices, relevant to my AI and security interests.</p>
                     </div>
                     <div class="portfolio-item">
-                        <h3>Submarine Explorer</h3>
+                        <h3>test work 3</h3>
                         <p>An exploratory application featuring complex navigation systems and data visualization techniques.</p>
                     </div>
                 </div>
@@ -517,55 +547,23 @@
                 </div>
             </div>
 
-            <!-- Projects Section -->
-            <div id="projects" class="content-section">
-                <h2>Notable Projects</h2>
-                <p>A selection of significant projects that demonstrate my technical capabilities and interests.</p>
-                
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <h3>AI-Powered Web Applications</h3>
-                        <p>Developed web applications that integrate machine learning models for real-time predictions and data analysis using Python, TensorFlow, and modern web frameworks.</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>Responsive Portfolio Website</h3>
-                        <p>Created a modern, responsive personal website showcasing projects and skills using HTML5, CSS3, JavaScript with clean, minimalist design principles.</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>Data Visualization Tools</h3>
-                        <p>Built interactive data visualization tools using Python libraries like Matplotlib, Seaborn, and Plotly for comprehensive data analysis and presentation.</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>Machine Learning Models</h3>
-                        <p>Implemented various ML algorithms for classification, regression, and clustering problems using Python, scikit-learn, and popular ML libraries.</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>Deep Learning Research</h3>
-                        <p>Conducted research projects involving neural networks, computer vision, and natural language processing using TensorFlow and PyTorch frameworks.</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <h3>Full-Stack Applications</h3>
-                        <p>Developed complete web applications with frontend and backend integration using React, Node.js, MongoDB, and RESTful API architecture.</p>
-                    </div>
-                </div>
-            </div>
 
             <!-- Contact Section -->
             <div id="contact" class="content-section">
                 <h2>Get In Touch</h2>
-                <p>I'm always interested in discussing technology, AI, web development, or potential collaboration opportunities.</p>
+                <!--     <p>I'm always interested in discussing technology, AI, web development, or potential collaboration opportunities.</p>  -->
                 
                 <div class="contact-form">
                     <form action="https://formspree.io/f/mblzraej" method="POST" id="contactForm">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
-                            <small class="form-help">Please enter your full name</small>
+                            <small class="form-help">Enter your full name</small>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address *</label>
                             <input type="email" id="email" name="_replyto" required>
-                            <small class="form-help">We'll never share your email</small>
+                            <!--     <small class="form-help">I'll never share your email</small> -->
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number (Optional)</label>
@@ -575,7 +573,7 @@
                         <div class="form-group">
                             <label for="message">Your Message *</label>
                             <textarea id="message" name="message" required placeholder="Tell me about your project, question, or just say hello!"></textarea>
-                            <small class="form-help">Please provide details about your inquiry</small>
+                            <!--     <small class="form-help">Please provide details about your inquiry</small>  -->
                         </div>
                         
                         <!-- Formspree hidden fields -->
@@ -588,7 +586,7 @@
                             <span class="btn-text">Send Message</span>
                             <span class="btn-loading" style="display: none;">Sending...</span>
                         </button>
-                        <small class="form-help">Your message will be sent securely via Formspree</small>
+                        <!--     <small class="form-help">Your message will be sent securely via Formspree</small> -->
                     </form>
                     
                     <!-- Status messages -->
@@ -597,28 +595,37 @@
 
                 <div style="margin-top: 30px;">
                     <h3>Location</h3>
-                    <p>Anamnagar, Kathmandu<br>Nepal</p>
+                    <p><i>Kathmandu, Nepal</i></p>
                 </div>
             </div>
 
             <!-- Social Media Section -->
             <div id="social" class="content-section">
                 <h2>Connect With Me</h2>
-                <p>Find me across various social media platforms and professional networks.</p>
-                
+                <p>Find me across :</p>
+
                 <div class="social-links">
-                    <a href="https://www.facebook.com/aarav.subedi.376" target="_blank">Facebook</a>
                     <a href="https://twitter.com/aarav_subedi1" target="_blank">Twitter</a>
                     <a href="https://www.linkedin.com/in/aarav-subedi-51b530237/" target="_blank">LinkedIn</a>
                     <a href="https://github.com/subedi-aarav" target="_blank">GitHub</a>
                 </div>
                 
-                <p style="margin-top: 20px;">Feel free to connect with me on any of these platforms. I'm always open to networking with fellow developers, AI enthusiasts, and technology professionals.</p>
+                <p style="margin-top: 20px;">Feel free to connect with me on any of these platforms.</p>
             </div>
         </div>
     </div>
 
     <script>
+
+        // Get today's date
+        const today = new Date();
+        // Format it as YYYY-MM-DD
+        const formattedDate = today.toISOString().split('T')[0];
+        // Insert into the div
+        document.getElementById("date").textContent = formattedDate;
+
+
+
         function showSection(sectionId) {
             // Hide all sections
             const sections = document.querySelectorAll('.content-section');
@@ -689,7 +696,7 @@
 
                         if (response.ok) {
                             // Show success message
-                            formStatus.innerHTML = '<strong>Success!</strong> Your message has been sent. I\'ll get back to you within 24 hours.';
+                            formStatus.innerHTML = '<strong>Success!</strong> Your message has been sent. I\'ll get back to you soon.';
                             formStatus.className = 'form-status success';
                             formStatus.style.display = 'block';
                             this.reset();
